@@ -3,8 +3,8 @@ import Button from "./Button";
 const Charm = () => {
   return (
     <section className="w-full">
-      <div className="max-w-6xl mx-auto rounded-lg mt-20 flex min-h-[526px] overflow-hidden">
-        <div className="w-1/2 py-10 px-8 bg-greenPrimary flex flex-col justify-between">
+      <div className="max-w-6xl mx-auto rounded-lg md:mt-20 flex min-h-[526px] overflow-hidden md:flex-row flex-col">
+        <div className="md:w-1/2 w-full py-10 px-8 bg-greenPrimary flex flex-col justify-between">
           <h2 className="text-[40px] font-bold text-white">
             Tombez sous le charme des{" "}
             <span className="text-bluePrimary">joyaux de l’atlantique</span>{" "}
@@ -31,7 +31,7 @@ const Charm = () => {
             href="#"
           />
         </div>
-        <div className="w-1/2 bg-[url('/images/FAMILLE-PLAGE.jpg')] bg-no-repeat bg-cover bg-center min-h-max"></div>
+        <div className="md:w-1/2 w-full bg-[url('/images/FAMILLE-PLAGE.jpg')] bg-no-repeat bg-cover bg-center min-h-max"></div>
       </div>
     </section>
   );
