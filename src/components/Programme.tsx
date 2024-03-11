@@ -89,7 +89,7 @@ const Programme = () => {
                 <div className="w-full md:min-h-[370px] flex flex-col justify-between items-start md:px-0 px-2">
                   <div className="w-full">
                     <h3 className="text-[40px] font-bold text-greenPrimary leading-[40px] mt-3">
-                      {programme.city}{" "}
+                      {programme.city} <br />
                       <span className="font-light text-[30px]">
                         ({programme.zip})
                       </span>
