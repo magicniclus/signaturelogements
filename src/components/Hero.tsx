@@ -3,8 +3,8 @@ import Button from "./Button";
 const Hero = () => {
   return (
     <section className="w-full md:bg-[url('/images/vague.png')] bg-no-repeat bg-cover bg-bottom flex flex-col relative">
-      <div className="md:hidden flex h-[650px] bg-[url('/images/vagueBig.png')] bg-no-repeat bg-cover bg-top"></div>
-      <div className="max-w-6xl md:px-4 min-h-[667px] flex justify-center items-end mx-auto w-full md:relative absolute -bottom-[250px] md:-bottom-0">
+      <div className="md:hidden flex h-[1000px] bg-[url('/images/vagueBig.png')] bg-no-repeat bg-cover bg-top"></div>
+      <div className="max-w-6xl md:px-4 min-h-[667px] flex justify-center items-end mx-auto w-full md:relative absolute -bottom-0">
         <div className="bg-bluePrimary rounded-t-full md:rounded-full p-5 flex w-full md:w-[522px] md:h-[522px] max-w-full flex-col items-center text-center relative">
           <h1 className="text-[40px] md:text-[55px] text-center text-white leading-[50px] mt-14 md:mt-5">
             Devenez <br /> propriétaire <br />{" "}
