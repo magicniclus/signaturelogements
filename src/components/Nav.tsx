@@ -9,7 +9,7 @@ const Nav = () => {
         <div className="flex items-center lg:flex hidden">
           <nav className=" px-4 py-2 bg-bluePrimary text-white rounded-full mr-5">
             <ul className="flex space-x-4">
-              <li className="mr-4">
+              <li className="">
                 <a href="#">Côté atlantique</a>
               </li>
               <li className="mr-4">
