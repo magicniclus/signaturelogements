@@ -64,7 +64,7 @@ const Programme = () => {
     },
   ];
   return (
-    <section className="w-full mt-16">
+    <section className="w-full mt-16" id="adresses">
       <div className="max-w-6xl mx-auto px-7 flex flex-col items-center">
         <h2 className="text-greenPrimary w-full md:w-9/12 text-[40px] font-bold text-center">
           Entre plages et pins maritimes pour une qualité de vie aussi
@@ -110,7 +110,7 @@ const Programme = () => {
                   <Button
                     value="Je me renseigne"
                     className="bg-bluePrimary text-white mt-10 px-5 py-3 max-w-max"
-                    href="#"
+                    href="#form"
                   />
                 </div>
               </div>
