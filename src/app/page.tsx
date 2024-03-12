@@ -1,3 +1,4 @@
+import Avantages from "@/components/Avantages";
 import Charm from "@/components/Charm";
 import Hero from "@/components/Hero";
 import Nav from "@/components/Nav";
@@ -15,6 +16,7 @@ export default function Home() {
         <Programme />
         <TextWithGlobalBackground />
         <Testimonial />
+        <Avantages />
       </main>
     </>
   );
