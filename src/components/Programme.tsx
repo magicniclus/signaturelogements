@@ -109,7 +109,7 @@ const Programme = () => {
                   </div>
                   <Button
                     value="Je me renseigne"
-                    className="bg-bluePrimary text-white mt-10 px-10 py-3 max-w-max"
+                    className="bg-bluePrimary text-white mt-10 px-5 py-3 max-w-max"
                     href="#"
                   />
                 </div>
