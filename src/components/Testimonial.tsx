@@ -6,6 +6,9 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
+import { StarIcon } from "@heroicons/react/20/solid";
+import Image from "next/image";
+
 const Testimonial = () => {
   return (
     <section className="w-full bg-greenPrimary">
@@ -21,7 +24,7 @@ const Testimonial = () => {
           <Carousel>
             <CarouselContent>
               <CarouselItem>
-                <div className="w-[85%] flex items-center mx-auto">
+                <div className="flex items-center mx-auto">
                   <div className="h-[100px] w-[100px] flex justify-center items-center bg-orange rounded-full">
                     <p className="text-white text-[43px]">M</p>
                   </div>
@@ -39,7 +42,7 @@ const Testimonial = () => {
                 </div>
               </CarouselItem>
               <CarouselItem>
-                <div className="w-[85%] flex items-center mx-auto">
+                <div className="flex items-center mx-auto">
                   <div className="h-[100px] w-[100px] flex justify-center items-center bg-orange rounded-full">
                     <p className="text-white text-[43px]">M</p>
                   </div>
@@ -57,7 +60,7 @@ const Testimonial = () => {
                 </div>
               </CarouselItem>
               <CarouselItem>
-                <div className="w-[85%] flex items-center mx-auto">
+                <div className="flex items-center mx-auto">
                   <div className="h-[100px] w-[100px] flex justify-center items-center bg-orange rounded-full">
                     <p className="text-white text-[43px]">M</p>
                   </div>
@@ -75,7 +78,7 @@ const Testimonial = () => {
                 </div>
               </CarouselItem>
               <CarouselItem>
-                <div className="w-[85%] flex items-center mx-auto">
+                <div className="flex items-center mx-auto">
                   <div className="h-[100px] w-[100px] flex justify-center items-center bg-orange rounded-full">
                     <p className="text-white text-[43px]">M</p>
                   </div>
@@ -93,7 +96,7 @@ const Testimonial = () => {
                 </div>
               </CarouselItem>
               <CarouselItem>
-                <div className="w-[85%] flex items-center mx-auto">
+                <div className="flex items-center mx-auto">
                   <div className="h-[100px] w-[100px] flex justify-center items-center bg-orange rounded-full">
                     <p className="text-white text-[43px]">M</p>
                   </div>
@@ -111,7 +114,7 @@ const Testimonial = () => {
                 </div>
               </CarouselItem>
               <CarouselItem>
-                <div className="w-[85%] flex items-center mx-auto">
+                <div className="flex items-center mx-auto">
                   <div className="h-[100px] w-[100px] flex justify-center items-center bg-orange rounded-full">
                     <p className="text-white text-[43px]">M</p>
                   </div>
@@ -133,6 +136,23 @@ const Testimonial = () => {
             <CarouselNext />
           </Carousel>
         </div>
+        <div className="flex mt-7">
+          <StarIcon className="w-[24px] h-auto text-yellowPrimary" />
+          <StarIcon className="w-[24px] h-auto text-yellowPrimary ml-2" />
+          <StarIcon className="w-[24px] h-auto text-yellowPrimary ml-2" />
+          <StarIcon className="w-[24px] h-auto text-yellowPrimary ml-2" />
+          <StarIcon className="w-[24px] h-auto text-yellowPrimary ml-2" />
+        </div>
+        <p className="mt-7 text-bluePrimary text-[16px] text-center">
+          Visite cloisons, avis déposé le 23 novembre 2023
+        </p>
+        <Image
+          src={"/images/seal.png"}
+          width={121}
+          height={121}
+          alt="immodvisor"
+          className="mt-7"
+        />
       </div>
     </section>
   );
