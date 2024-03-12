@@ -38,6 +38,7 @@ const config = {
       bluePrimary: "#1D2749",
       greenPrimary: "#7BA28A",
       white: "#FFFFFF",
+      yellowPrimary: "#C8A84D",
     },
   },
   plugins: [require("tailwindcss-animate")],
