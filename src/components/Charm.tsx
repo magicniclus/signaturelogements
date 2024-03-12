@@ -2,7 +2,7 @@ import Button from "./Button";
 
 const Charm = () => {
   return (
-    <section className="w-full md:px-7">
+    <section className="w-full md:px-7" id="atlantique">
       <div className="max-w-6xl mx-auto rounded-lg md:mt-20 flex min-h-[526px] overflow-hidden md:flex-row flex-col">
         <div className="md:w-1/2 w-full py-10 px-8 bg-greenPrimary flex flex-col justify-between">
           <h2 className="text-[40px] font-bold text-white">
@@ -28,7 +28,7 @@ const Charm = () => {
           <Button
             value="Je me renseigne"
             className="bg-bluePrimary text-white mt-10 px-10 py-3 max-w-max"
-            href="#"
+            href="#form"
           />
         </div>
         <div className="md:w-1/2 w-full bg-[url('/images/FAMILLE-PLAGE.jpg')] bg-no-repeat bg-cover bg-center min-h-max"></div>
