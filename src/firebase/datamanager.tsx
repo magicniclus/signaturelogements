@@ -2,22 +2,11 @@ import axios from "axios";
 import { ref, set } from "firebase/database";
 import { database } from "./firebase.config";
 
-export function writeUserData(
-  userId: string,
-  nom: string,
-  prenom: string,
-  email: string,
-  telephone: string,
-  civilite: string
-) {
+export function writeUserData(email: string, userId: string) {
   const dateEtHeure = new Date().toISOString();
   return new Promise((resolve, reject) => {
-    set(ref(database, "contactsCambuim/" + userId), {
-      nom,
-      prenom,
+    set(ref(database, "contactsMultitProgramme/" + userId), {
       email,
-      telephone,
-      civilite,
       dateEtHeure,
     })
       .then(() => {
@@ -29,23 +18,12 @@ export function writeUserData(
   });
 }
 
-export function writeCRMUserData(
-  nom: string,
-  prenom: string,
-  email: string,
-  telephone: string,
-  civilite: string
-) {
+export function writeCRMUserData(email: string) {
   const dateEtHeure = new Date().toISOString();
 
   // Structure des données pour l'API
   const contactData = {
-    nom: nom,
-    prenom: prenom,
     email: email,
-    telephone_mobile: telephone,
-    civilite: civilite,
-    code_postal: "17000",
 
     demande: {
       date: dateEtHeure,
