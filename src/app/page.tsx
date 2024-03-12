@@ -1,5 +1,6 @@
 import Avantages from "@/components/Avantages";
 import Charm from "@/components/Charm";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Nav from "@/components/Nav";
 import Programme from "@/components/Programme";
@@ -18,6 +19,7 @@ export default function Home() {
         <Testimonial />
         <Avantages />
       </main>
+      <Footer />
     </>
   );
 }
