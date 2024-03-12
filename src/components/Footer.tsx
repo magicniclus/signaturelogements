@@ -21,7 +21,7 @@ const Footer = () => {
             Je veux être contacté
           </p>
           <Button
-            href="#"
+            href="#form"
             value="Contactez-moi"
             className="bg-orange text-white md:h-[83px] w-[287px] md:mt-0 mt-5"
           />
@@ -31,7 +31,7 @@ const Footer = () => {
             Je préfère vous <br /> appeler
           </p>
           <Button
-            href="#"
+            href="tel:0556367038"
             value="05 56 36 70 38"
             className="bg-orange text-white md:h-[83px] w-[287px] md:mt-0 mt-5"
           />
