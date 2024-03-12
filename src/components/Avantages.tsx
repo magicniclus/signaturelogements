@@ -3,7 +3,7 @@ import Image from "next/image";
 const Avantages = () => {
   return (
     <section className="w-full">
-      <div className="max-w-6xl mx-auto py-16 px-4 md:px-0 flex items-center flex-col">
+      <div className="max-w-6xl mx-auto py-16 px-7 flex items-center flex-col">
         <Image src="/logos/logoBig.png" width={412} height={100} alt="logo" />
         <h2 className="text-bluePrimary w-full text-[40px] font-bold text-center w-9/12 mt-10">
           Le sur-mesure{" "}
