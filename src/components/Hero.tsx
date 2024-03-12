@@ -1,8 +1,10 @@
 "use client";
+import { useRouter } from "next/navigation";
 import { FormEvent, useState } from "react";
 import { writeUserData } from "../firebase/datamanager";
 
 const Hero = () => {
+  const route = useRouter();
   const [email, setEmail] = useState("");
   const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -18,6 +20,7 @@ const Hero = () => {
     writeUserData(email, userId)
       .then((response) => {
         console.log(response);
+        route.push("/merci");
       })
       .catch((error) => {
         console.error(error);
@@ -36,6 +39,7 @@ const Hero = () => {
       <div className="md:hidden flex h-[1000px] bg-[url('/images/vagueBig.png')] bg-no-repeat bg-cover bg-top"></div>
       <div className="max-w-6xl md:px-4 min-h-[667px] flex justify-center items-end mx-auto w-full md:relative absolute -bottom-0">
         <form
+          id="form"
           onSubmit={handleSubmit}
           className="bg-bluePrimary rounded-t-full md:rounded-full p-5 flex w-full md:w-[522px] md:h-[522px] max-w-full flex-col items-center text-center relative"
         >
