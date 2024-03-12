@@ -10,7 +10,7 @@ import TextWithGlobalBackground from "@/components/TextWithGlobalBackground";
 export default function Home() {
   return (
     <>
-      <Nav />
+      <Nav nav={true} />
       <main>
         <Hero />
         <Charm />
