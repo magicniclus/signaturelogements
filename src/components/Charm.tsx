@@ -2,14 +2,14 @@ import Button from "./Button";
 
 const Charm = () => {
   return (
-    <section className="w-full">
+    <section className="w-full md:px-7">
       <div className="max-w-6xl mx-auto rounded-lg md:mt-20 flex min-h-[526px] overflow-hidden md:flex-row flex-col">
         <div className="md:w-1/2 w-full py-10 px-8 bg-greenPrimary flex flex-col justify-between">
           <h2 className="text-[40px] font-bold text-white">
             Tombez sous le charme des{" "}
             <span className="text-bluePrimary">joyaux de l’atlantique</span>{" "}
           </h2>
-          <ul className="mt-5">
+          <ul className="mt-5 ml-5">
             <li className="text-[20px] text-white list-disc mt-2">
               La Côte de beauté à Breuillet, commune de
               <span className="font-bold">Royan Atlantique</span>, située entre
