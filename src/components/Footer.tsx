@@ -4,7 +4,7 @@ import Button from "./Button";
 const Footer = () => {
   return (
     <footer className="w-full bg-bluePrimary">
-      <div className="max-w-6xl mx-auto w-full py-16 px-7 flex justify-between items-center lg:flex-row flex-col h-full">
+      <div className="max-w-7xl mx-auto w-full py-16 px-7 flex justify-between items-center lg:flex-row flex-col h-full">
         <div className="flex flex-col">
           <Image
             src="/logos/logoWhite.png"
