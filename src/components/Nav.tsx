@@ -12,12 +12,12 @@ interface NavProps {
 }
 
 const Nav = ({ nav }: NavProps) => {
-  gsap.set(".header", { y: -100, opacity: 0 });
+  gsap.set(".header", { y: -50, opacity: 0 });
 
   useEffect(() => {
     gsap.fromTo(
       ".header",
-      { y: -100, opacity: 0 },
+      { y: -50, opacity: 0 },
       { y: 0, opacity: 1, duration: 1, ease: "power2.out" }
     );
   }, []);
