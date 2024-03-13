@@ -1,9 +1,37 @@
+"use client";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+import { useEffect } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
+
 import Image from "next/image";
 
 const Avantages = () => {
+  useEffect(() => {
+    gsap.set(".avantages-container", { y: -100, opacity: 0 });
+
+    const tl = gsap.timeline({
+      defaults: { duration: 0.5, ease: "power2.out" },
+      scrollTrigger: {
+        trigger: ".avantages",
+        start: "top 80%",
+        end: "top 50%",
+        // markers: true,
+      },
+    });
+    tl.fromTo(
+      ".avantages-container",
+      { y: -100, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, ease: "power2.out" }
+    );
+  }, []);
+
   return (
-    <section className="w-full" id="engagement">
-      <div className="max-w-6xl mx-auto py-16 px-7 flex items-center flex-col">
+    <section className="w-full avantages overflow-hidden" id="engagement">
+      <div className="max-w-7xl mx-auto py-16 px-7 flex items-center flex-col avantages-container">
         <Image src="/logos/logoBig.png" width={412} height={100} alt="logo" />
         <h2 className="text-bluePrimary w-full text-[40px] font-bold text-center w-9/12 mt-10">
           Le sur-mesure{" "}
