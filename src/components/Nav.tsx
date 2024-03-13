@@ -1,14 +1,30 @@
+"use client";
+
 import Image from "next/image";
 import Button from "./Button";
+
+import gsap from "gsap";
+
+import { useEffect } from "react";
 
 interface NavProps {
   nav: boolean;
 }
 
 const Nav = ({ nav }: NavProps) => {
+  gsap.set(".header", { y: -100, opacity: 0 });
+
+  useEffect(() => {
+    gsap.fromTo(
+      ".header",
+      { y: -100, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, ease: "power2.out" }
+    );
+  }, []);
+
   return (
-    <header className="w-full">
-      <div className="max-w-6xl px-4 py-5 flex lg:justify-between justify-center mx-auto">
+    <header className="w-full header">
+      <div className="max-w-7xl px-4 py-5 flex lg:justify-between justify-center mx-auto">
         <a href="/">
           <Image src="/logos/logo.png" alt="logo" width={250} height={80} />
         </a>
