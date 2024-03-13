@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Charm = () => {
   useEffect(() => {
-    gsap.set(".charm-text", { y: -100, opacity: 0 });
+    gsap.set(".charm-text", { y: -50, opacity: 0 });
 
     const tl = gsap.timeline({
       defaults: { duration: 0.5, ease: "power2.out" },
@@ -23,7 +23,7 @@ const Charm = () => {
     });
     tl.fromTo(
       ".charm-text",
-      { y: -100, opacity: 0 },
+      { y: -50, opacity: 0 },
       { y: 0, opacity: 1, duration: 1, ease: "power2.out" }
     );
   }, []);
@@ -34,12 +34,12 @@ const Charm = () => {
       id="atlantique"
     >
       <div className="max-w-7xl mx-auto rounded-lg md:mt-20 flex min-h-[526px] overflow-hidden md:flex-row flex-col">
-        <div className="md:w-1/2 w-full py-10 px-8 bg-greenPrimary flex flex-col justify-between charm-text">
-          <h2 className="text-[40px] font-bold text-white">
+        <div className="md:w-1/2 w-full py-10 px-8 bg-greenPrimary flex flex-col justify-between">
+          <h2 className="text-[40px] font-bold text-white charm-text">
             Tombez sous le charme des{" "}
             <span className="text-bluePrimary">joyaux de l’atlantique</span>{" "}
           </h2>
-          <ul className="mt-5 ml-5">
+          <ul className="mt-5 ml-5 charm-text">
             <li className="text-[20px] text-white list-disc mt-2">
               La Côte de beauté à Breuillet, commune de
               <span className="font-bold">Royan Atlantique</span>, située entre
@@ -57,7 +57,7 @@ const Charm = () => {
           </ul>
           <Button
             value="Je me renseigne"
-            className="bg-bluePrimary text-white mt-10 px-10 py-3 max-w-max"
+            className="bg-bluePrimary text-white mt-10 px-10 py-3 max-w-max charm-text"
             href="#form"
           />
         </div>
