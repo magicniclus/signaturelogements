@@ -11,7 +11,7 @@ import Image from "next/image";
 
 const Avantages = () => {
   useEffect(() => {
-    gsap.set(".avantages-container", { y: -100, opacity: 0 });
+    gsap.set(".avantages-container", { y: -50, opacity: 0 });
 
     const tl = gsap.timeline({
       defaults: { duration: 0.5, ease: "power2.out" },
@@ -24,7 +24,7 @@ const Avantages = () => {
     });
     tl.fromTo(
       ".avantages-container",
-      { y: -100, opacity: 0 },
+      { y: -50, opacity: 0 },
       { y: 0, opacity: 1, duration: 1, ease: "power2.out" }
     );
   }, []);
