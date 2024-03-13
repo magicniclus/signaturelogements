@@ -1,6 +1,39 @@
+"use client";
+
+import { useEffect } from "react";
 import Button from "./Button";
 
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const Programme = () => {
+  useEffect(() => {
+    gsap.set(".title-programme", { y: -100, opacity: 0 });
+    gsap.set(".card-programme", { y: -100, opacity: 0 });
+
+    const tl = gsap.timeline({
+      defaults: { duration: 0.5, ease: "power2.out" },
+      scrollTrigger: {
+        trigger: ".programme",
+        start: "top 80%",
+        end: "top 50%",
+        // markers: true,
+      },
+    });
+    tl.fromTo(
+      ".title-programme",
+      { y: -100, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, ease: "power2.out" }
+    ).fromTo(
+      ".card-programme",
+      { y: -100, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, ease: "power2.out" },
+      "-=0.5"
+    );
+  }, []);
+
   const programmeList = [
     {
       city: "Lège-Cap Ferret",
@@ -64,13 +97,13 @@ const Programme = () => {
     },
   ];
   return (
-    <section className="w-full mt-16" id="adresses">
-      <div className="max-w-6xl mx-auto px-7 flex flex-col items-center">
-        <h2 className="text-greenPrimary w-full md:w-9/12 text-[40px] font-bold text-center">
+    <section className="w-full mt-16 programme overflow-hidden" id="adresses">
+      <div className="max-w-7xl mx-auto px-7 flex flex-col items-center">
+        <h2 className="title-programme text-greenPrimary w-full md:w-9/12 text-[40px] font-bold text-center">
           Entre plages et pins maritimes pour une qualité de vie aussi
           <span className="text-bluePrimary"> épanouissante que pratique</span>
         </h2>
-        <div className="flex justify-between flex-wrap w-full">
+        <div className="flex justify-between flex-wrap w-full card-programme">
           {programmeList.map((programme, index) => {
             return (
               <div
