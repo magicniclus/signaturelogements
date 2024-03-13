@@ -1,17 +1,21 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { FormEvent, useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { writeUserData } from "../firebase/datamanager";
 
 import gsap from "gsap";
 
 const Hero = () => {
-  const route = useRouter();
-  const [email, setEmail] = useState("");
-  const [isCheckboxChecked, setIsCheckboxChecked] = useState(false);
-  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setIsCheckboxChecked(e.target.checked);
-  };
+  const router = useRouter();
+  const [email, setEmail] = useState<string>("");
+  const [name, setName] = useState<string>("");
+  const [phone, setPhone] = useState<string>("");
+  const [isCheckboxChecked, setIsCheckboxChecked] = useState<boolean>(false);
+  const [errorMessage, setErrorMessage] = useState<string>("");
+  const [step, setStep] = useState<number>(1);
+  const [isEmailValid, setIsEmailValid] = useState<boolean>(false);
+  const [isNameValid, setIsNameValid] = useState<boolean>(false);
+  const [isPhoneValid, setIsPhoneValid] = useState<boolean>(false);
 
   useEffect(() => {
     gsap.set(".hero", { opacity: 0 });
@@ -22,27 +26,68 @@ const Hero = () => {
     );
   }, []);
 
-  const [isEmailValid, setIsEmailValid] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("Submitting:", { email, isCheckboxChecked });
-    const userId = Date.now().toString();
-    writeUserData(email, userId)
-      .then((response) => {
-        console.log(response);
-        route.push("/merci");
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+  const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setEmail(value);
+    setIsEmailValid(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value));
   };
 
-  const handleEmailChange = (e: FormEvent<HTMLInputElement>) => {
-    const emailValue = (e.target as HTMLInputElement).value;
-    setEmail(emailValue);
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    setIsEmailValid(emailRegex.test(emailValue));
+  const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setName(value);
+    setIsNameValid(value.length >= 2);
+  };
+
+  const handlePhoneChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setPhone(value);
+    setIsPhoneValid(
+      /^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/.test(value)
+    );
+  };
+
+  const handleCheckboxChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setIsCheckboxChecked(e.target.checked);
+  };
+
+  const canProceed = () => {
+    if (step === 1) return isEmailValid;
+    if (step === 2) return isNameValid;
+    if (step === 3) return isPhoneValid && isCheckboxChecked;
+    return false;
+  };
+
+  const handleNextClick = () => {
+    if (!canProceed()) {
+      setErrorMessage(
+        "Veuillez compléter correctement tous les champs avant de continuer."
+      );
+      return;
+    }
+
+    if (step < 3) {
+      setStep(step + 1);
+      setErrorMessage("");
+    } else {
+      handleSubmit();
+    }
+  };
+
+  const handleSubmit = () => {
+    if (canProceed()) {
+      const userId = Date.now().toString();
+      writeUserData(email, userId)
+        .then((response) => {
+          console.log(response);
+          router.push("/merci");
+        })
+        .catch((error) => {
+          console.error(error);
+          setErrorMessage(
+            "Une erreur est survenue lors de l'envoi des données."
+          );
+        });
+    }
   };
 
   return (
@@ -67,38 +112,85 @@ const Hero = () => {
           <p className="text-white text-[20px] leading-[20px] mb-3">
             On vous recontacte !
           </p>
-          <input
-            type="text"
-            placeholder="Email"
-            className="p-3 rounded-full w-[290px] md:w-[342px] rounded-lg mt-3 h-[33px]"
-            value={email}
-            onChange={handleEmailChange}
-          />
-          <div className="flex mb-5 md:mb-20 items-start mt-3 max-w-[70%]">
+          {step === 1 && (
             <input
-              type="checkbox"
-              className="bg-white mt-0.5 text-[15px]"
-              onChange={handleCheckboxChange}
+              type="text"
+              value={email}
+              onChange={handleEmailChange}
+              placeholder="Votre email"
+              className="p-3 rounded-full w-[290px] md:w-[342px] rounded-lg mt-3 h-[33px]"
             />
-            <p className="text-start text-white text-[12px] ml-1">
-              J’accepte de recevoir par email des informations de la part de
-              Signature Promotion.
-            </p>
-          </div>
-          <button
-            type="submit"
-            disabled={!isEmailValid}
-            className="p-5 rounded-full border border-white flex justify-center items-center bg-orange text-white mb-10 px-10 w-[290px] md:min-w-[342px] md:px-16 text-[20px] md:hidden flex"
-          >
-            Je veux être contacté
-          </button>
-          <button
-            type="submit"
-            disabled={!isEmailValid}
-            className="p-5 rounded-full border border-white flex justify-center items-center bg-orange text-white absolute bottom-[-0px] px-16 text-[30px] md:flex hidden"
-          >
-            Je veux être contacté
-          </button>
+          )}
+          {step === 2 && (
+            <input
+              type="text"
+              value={name}
+              onChange={handleNameChange}
+              className="p-3 rounded-full w-[290px] md:w-[342px] rounded-lg mt-3 h-[33px]"
+              placeholder="Votre nom"
+            />
+          )}
+          {step === 3 && (
+            <>
+              <input
+                type="text"
+                placeholder="Téléphone"
+                className="p-3 rounded-full w-[290px] md:w-[342px] rounded-lg mt-3 h-[33px]"
+                value={phone}
+                onChange={handlePhoneChange}
+              />
+              <div className="flex mb-5 md:mb-20 items-start mt-3 max-w-[70%]">
+                <input
+                  type="checkbox"
+                  className="bg-white mt-0.5 text-[15px]"
+                  onChange={handleCheckboxChange}
+                />
+                <p className="text-start text-white text-[12px] ml-1">
+                  J’accepte de recevoir par email des informations de la part de
+                  Signature Promotion.
+                </p>
+              </div>
+            </>
+          )}
+          {errorMessage && <div>{errorMessage}</div>}
+          {step < 3 && (
+            <button
+              type="button"
+              onClick={handleNextClick}
+              disabled={!canProceed()}
+              className="p-5 rounded-full border border-white flex justify-center items-center bg-orange text-white mb-10 px-10 w-[290px] md:min-w-[342px] md:px-16 text-[20px] md:hidden flex"
+            >
+              Je veux être contacté
+            </button>
+          )}
+          {step === 3 && (
+            <button
+              type="submit"
+              disabled={!canProceed()}
+              className="p-5 rounded-full border border-white flex justify-center items-center bg-orange text-white mb-10 px-10 w-[290px] md:min-w-[342px] md:px-16 text-[20px] md:hidden flex"
+            >
+              Je veux être contacté
+            </button>
+          )}
+          {step < 3 && (
+            <button
+              type="button"
+              onClick={handleNextClick}
+              disabled={!canProceed()}
+              className="p-5 rounded-full border border-white flex justify-center items-center bg-orange text-white absolute bottom-[-0px] px-16 text-[30px] md:flex hidden"
+            >
+              Je veux être contacté
+            </button>
+          )}
+          {step === 3 && (
+            <button
+              type="submit"
+              disabled={!canProceed()}
+              className="p-5 rounded-full border border-white flex justify-center items-center bg-orange text-white absolute bottom-[-0px] px-16 text-[30px] md:flex hidden"
+            >
+              Je veux être contacté
+            </button>
+          )}
         </form>
       </div>
     </section>
