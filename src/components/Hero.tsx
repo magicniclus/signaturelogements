@@ -1,7 +1,9 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { writeUserData } from "../firebase/datamanager";
+
+import gsap from "gsap";
 
 const Hero = () => {
   const route = useRouter();
@@ -10,6 +12,15 @@ const Hero = () => {
   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setIsCheckboxChecked(e.target.checked);
   };
+
+  useEffect(() => {
+    gsap.set(".hero", { opacity: 0 });
+    gsap.fromTo(
+      ".hero",
+      { opacity: 0 },
+      { opacity: 1, duration: 0.5, ease: "power1.out", delay: 1 }
+    );
+  }, []);
 
   const [isEmailValid, setIsEmailValid] = useState(false);
 
@@ -35,9 +46,9 @@ const Hero = () => {
   };
 
   return (
-    <section className="w-full md:bg-[url('/images/vague.png')] bg-no-repeat bg-cover bg-bottom flex flex-col relative">
+    <section className="w-full md:bg-[url('/images/vague.png')] bg-no-repeat bg-cover bg-bottom flex flex-col relative hero overflow-hidden">
       <div className="md:hidden flex h-[1000px] bg-[url('/images/vagueBig.png')] bg-no-repeat bg-cover bg-top"></div>
-      <div className="max-w-6xl md:px-4 min-h-[667px] flex justify-center items-end mx-auto w-full md:relative absolute -bottom-0">
+      <div className="max-w-7xl md:px-4 min-h-[667px] flex justify-center items-end mx-auto w-full md:relative absolute -bottom-0">
         <form
           id="form"
           onSubmit={handleSubmit}
