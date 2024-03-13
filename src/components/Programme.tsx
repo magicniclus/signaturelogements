@@ -10,8 +10,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Programme = () => {
   useEffect(() => {
-    gsap.set(".title-programme", { y: -100, opacity: 0 });
-    gsap.set(".card-programme", { y: -100, opacity: 0 });
+    gsap.set(".title-programme", { y: -50, opacity: 0 });
+    gsap.set(".card-programme", { y: -50, opacity: 0 });
 
     const tl = gsap.timeline({
       defaults: { duration: 0.5, ease: "power2.out" },
@@ -24,11 +24,11 @@ const Programme = () => {
     });
     tl.fromTo(
       ".title-programme",
-      { y: -100, opacity: 0 },
+      { y: -50, opacity: 0 },
       { y: 0, opacity: 1, duration: 1, ease: "power2.out" }
     ).fromTo(
       ".card-programme",
-      { y: -100, opacity: 0 },
+      { y: -50, opacity: 0 },
       { y: 0, opacity: 1, duration: 1, ease: "power2.out" },
       "-=0.5"
     );
