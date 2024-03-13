@@ -1,8 +1,34 @@
+"use client";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const TextWithGlobalBackground = () => {
+  useEffect(() => {
+    gsap.set(".text-with-global-background-container", { y: -100, opacity: 0 });
+
+    const tl = gsap.timeline({
+      defaults: { duration: 0.5, ease: "power2.out" },
+      scrollTrigger: {
+        trigger: ".text-with-global-background",
+        start: "top 80%",
+        end: "top 50%",
+        // markers: true,
+      },
+    });
+    tl.fromTo(
+      ".text-with-global-background-container",
+      { y: -100, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, ease: "power2.out" }
+    );
+  }, []);
   return (
-    <section className="w-full bg-[url('/images/interieur.jpg')] bg-no-repeat bg-cover bg-center mt-16">
-      <div className="max-w-6xl w-full mx-auto flex md:flex-row flex-col h-full">
-        <div className="w-full md:w-6/12 h-full bg-bluePrimary py-28 px-16">
+    <section className="w-full bg-[url('/images/interieur.jpg')] bg-no-repeat bg-cover bg-center mt-16 text-with-global-background overflow-hidden">
+      <div className="max-w-7xl w-full mx-auto flex md:flex-row flex-col h-full">
+        <div className="w-full md:w-6/12 h-full bg-bluePrimary py-28 px-16 text-with-global-background-container">
           <h2 className="text-white w-full text-[40px] font-bold leading-[50px]">
             Des volumes généreux
             <span className="text-greenPrimary"> et ouverts sur la nature</span>
