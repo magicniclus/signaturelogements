@@ -12,14 +12,17 @@ interface NavProps {
 }
 
 const Nav = ({ nav }: NavProps) => {
-  gsap.set(".header", { y: -50, opacity: 0 });
-
   useEffect(() => {
-    gsap.fromTo(
-      ".header",
-      { y: -50, opacity: 0 },
-      { y: 0, opacity: 1, duration: 1, ease: "power2.out" }
-    );
+    const headerElement = document.querySelector(".header");
+
+    gsap.set("headerElement", { y: -50, opacity: 0 });
+    if (headerElement) {
+      gsap.fromTo(
+        headerElement,
+        { y: -50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1, ease: "power2.out" }
+      );
+    }
   }, []);
 
   return (
