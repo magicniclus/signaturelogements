@@ -77,7 +77,7 @@ const Hero = () => {
     event?.preventDefault();
     if (canProceed()) {
       const userId = Date.now().toString();
-      writeUserData(email, userId)
+      writeUserData(email, name, phone, userId)
         .then((response) => {
           console.log(response);
           router.push("/merci");
