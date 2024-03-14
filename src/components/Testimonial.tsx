@@ -39,7 +39,7 @@ const Testimonial = () => {
 
   return (
     <section className="w-full bg-greenPrimary carousel-contant-container overflow-hidden">
-      <div className="max-w-7xl mx-auto py-16 px-4 md:px-0 flex items-center flex-col">
+      <div className="max-w-7xl mx-auto py-16 px-7 md:px-0 flex items-center flex-col">
         <h2 className="text-white w-full text-[40px] font-bold text-center carousel-content">
           100%
           <span className="text-bluePrimary">
@@ -163,14 +163,14 @@ const Testimonial = () => {
             <CarouselNext />
           </Carousel>
         </div>
-        <div className="flex mt-7 .carousel-content">
+        <div className="flex mt-7 carousel-content">
           <StarIcon className="w-[24px] h-auto text-yellowPrimary" />
           <StarIcon className="w-[24px] h-auto text-yellowPrimary ml-2" />
           <StarIcon className="w-[24px] h-auto text-yellowPrimary ml-2" />
           <StarIcon className="w-[24px] h-auto text-yellowPrimary ml-2" />
           <StarIcon className="w-[24px] h-auto text-yellowPrimary ml-2" />
         </div>
-        <p className="mt-3 text-bluePrimary text-[16px] text-center .carousel-content">
+        <p className="mt-3 text-bluePrimary text-[16px] text-center carousel-content">
           Visite cloisons, avis déposé le 23 novembre 2023
         </p>
         <Image
@@ -178,7 +178,7 @@ const Testimonial = () => {
           width={121}
           height={121}
           alt="immodvisor"
-          className="mt-5 .carousel-content"
+          className="mt-5 carousel-content"
         />
       </div>
     </section>
