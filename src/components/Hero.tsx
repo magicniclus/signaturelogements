@@ -74,6 +74,7 @@ const Hero = () => {
   };
 
   const handleSubmit = () => {
+    event?.preventDefault();
     if (canProceed()) {
       const userId = Date.now().toString();
       writeUserData(email, userId)
