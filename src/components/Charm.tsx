@@ -33,7 +33,7 @@ const Charm = () => {
       className="w-full md:px-7 charm-container overflow-hidden"
       id="atlantique"
     >
-      <div className="max-w-7xl mx-auto rounded-lg md:mt-20 flex min-h-[526px] overflow-hidden md:flex-row flex-col">
+      <div className="max-w-7xl mx-auto md:rounded-lg md:mt-20 flex min-h-[526px] overflow-hidden md:flex-row flex-col">
         <div className="md:w-1/2 w-full py-10 px-8 bg-greenPrimary flex flex-col justify-between">
           <h2 className="text-[40px] font-bold text-white charm-text">
             Tombez sous le charme des{" "}
