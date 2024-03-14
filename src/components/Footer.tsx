@@ -23,7 +23,7 @@ const Footer = () => {
           <Button
             href="#form"
             value="Contactez-moi"
-            className="bg-orange text-white md:h-[83px] w-[287px] md:mt-0 mt-8"
+            className="bg-orange text-white md:h-[83px] w-[287px] md:mt-11 mt-8"
           />
         </div>
         <div className="flex flex-col md:h-[180px] justify-between md:mt-0 mt-10">
