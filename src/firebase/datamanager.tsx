@@ -2,11 +2,18 @@ import axios from "axios";
 import { ref, set } from "firebase/database";
 import { database } from "./firebase.config";
 
-export function writeUserData(email: string, userId: string) {
+export function writeUserData(
+  email: string,
+  name: string,
+  phone: string,
+  userId: string
+) {
   const dateEtHeure = new Date().toISOString();
   return new Promise((resolve, reject) => {
     set(ref(database, "contactsMultitProgramme/" + userId), {
       email,
+      name,
+      phone,
       dateEtHeure,
     })
       .then(() => {
