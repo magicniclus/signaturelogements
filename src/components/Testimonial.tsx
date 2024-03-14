@@ -71,17 +71,15 @@ const Testimonial = () => {
               <CarouselItem>
                 <div className="flex items-center justify-center">
                   <div className="h-[100px] w-[100px] flex justify-center items-center bg-orange rounded-full">
-                    <p className="text-white text-[43px]">M</p>
+                    <p className="text-white text-[43px]">L</p>
                   </div>
                   <div className="w-9/12 flex flex-col ml-5">
                     <h3 className="text-bluePrimary text-[20px] font-bold">
-                      « ACCUEUIL SYMPATHIQUE ET PROFESSIONNEL »
+                      « Professionnel et compétent »
                     </h3>
                     <p className="text-bluePrimary text-[20px]">
-                      Entreprise très sérieuse Nous apprécions d’être tenus
-                      informés régulièrement sur l’avancement des travaux Très
-                      bon accueil à chaque rencontre avec un personnel très
-                      compétent{" "}
+                      Très agréable accompagnement et travail qui nous convient
+                      très bien. Merci.
                     </p>
                   </div>
                 </div>
@@ -89,17 +87,33 @@ const Testimonial = () => {
               <CarouselItem>
                 <div className="flex items-center justify-center carousel-content">
                   <div className="h-[100px] w-[100px] flex justify-center items-center bg-orange rounded-full">
-                    <p className="text-white text-[43px]">M</p>
+                    <p className="text-white text-[43px]">G</p>
                   </div>
                   <div className="w-9/12 flex flex-col ml-5">
                     <h3 className="text-bluePrimary text-[20px] font-bold">
-                      « ACCUEUIL SYMPATHIQUE ET PROFESSIONNEL »
+                      « Agence très compétente »
                     </h3>
                     <p className="text-bluePrimary text-[20px]">
-                      Entreprise très sérieuse Nous apprécions d’être tenus
-                      informés régulièrement sur l’avancement des travaux Très
-                      bon accueil à chaque rencontre avec un personnel très
-                      compétent{" "}
+                      Bon accueil, personnel sérieux et professionnel, réponse
+                      rapide à nos questions.
+                    </p>
+                  </div>
+                </div>
+              </CarouselItem>
+              <CarouselItem>
+                <div className="flex items-center justify-center">
+                  <div className="h-[100px] w-[100px] flex justify-center items-center bg-orange rounded-full">
+                    <p className="text-white text-[43px]">I</p>
+                  </div>
+                  <div className="w-9/12 flex flex-col ml-5">
+                    <h3 className="text-bluePrimary text-[20px] font-bold">
+                      « BIEN »
+                    </h3>
+                    <p className="text-bluePrimary text-[20px]">
+                      Jusqu’à présent tout c’est très bien passé. Efficacité des
+                      différentes personnes, cordialité… Le projet est bien
+                      avancé dans les temps annoncés. L’organisation fonctionne
+                      bien.
                     </p>
                   </div>
                 </div>
@@ -125,35 +139,15 @@ const Testimonial = () => {
               <CarouselItem>
                 <div className="flex items-center justify-center">
                   <div className="h-[100px] w-[100px] flex justify-center items-center bg-orange rounded-full">
-                    <p className="text-white text-[43px]">M</p>
+                    <p className="text-white text-[43px]">A</p>
                   </div>
                   <div className="w-9/12 flex flex-col ml-5">
                     <h3 className="text-bluePrimary text-[20px] font-bold">
-                      « ACCUEUIL SYMPATHIQUE ET PROFESSIONNEL »
+                      « Professionnel et compétent »
                     </h3>
                     <p className="text-bluePrimary text-[20px]">
-                      Entreprise très sérieuse Nous apprécions d’être tenus
-                      informés régulièrement sur l’avancement des travaux Très
-                      bon accueil à chaque rencontre avec un personnel très
-                      compétent{" "}
-                    </p>
-                  </div>
-                </div>
-              </CarouselItem>
-              <CarouselItem>
-                <div className="flex items-center justify-center">
-                  <div className="h-[100px] w-[100px] flex justify-center items-center bg-orange rounded-full">
-                    <p className="text-white text-[43px]">M</p>
-                  </div>
-                  <div className="w-9/12 flex flex-col ml-5">
-                    <h3 className="text-bluePrimary text-[20px] font-bold">
-                      « ACCUEUIL SYMPATHIQUE ET PROFESSIONNEL »
-                    </h3>
-                    <p className="text-bluePrimary text-[20px]">
-                      Entreprise très sérieuse Nous apprécions d’être tenus
-                      informés régulièrement sur l’avancement des travaux Très
-                      bon accueil à chaque rencontre avec un personnel très
-                      compétent{" "}
+                      Très agréable accompagnement et travail qui nous convient
+                      très bien. Merci.
                     </p>
                   </div>
                 </div>
