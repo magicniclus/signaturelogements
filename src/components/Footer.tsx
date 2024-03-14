@@ -13,7 +13,13 @@ const Footer = () => {
             height={80}
           />
           <p className="text-[20px] text-white mt-10">
-            ©Signature Promotion 2024 | <a href="#">Mentions légales</a>
+            ©Signature Promotion 2024 |{" "}
+            <a
+              href="https://www.signature-promotion.fr/mentions-legales/"
+              target="_blank"
+            >
+              Mentions légales
+            </a>
           </p>
         </div>
         <div className="flex flex-col md:h-[180px] justify-between md:mt-0 mt-10">
