@@ -40,7 +40,7 @@ const Avantages = () => {
           </span>{" "}
           satisfaire nos clients propriétaires
         </h2>
-        <div className="w-full flex justify-around items-center mt-16">
+        <div className="w-full flex justify-around items-center mt-16 md:flex-row flex-col">
           <div className="flex flex-col items-center">
             <div className="p-5 rounded-full bg-bluePrimary flex justify-center items-center h-[100px] w-[100px]">
               <Image src="/icons/hand.png" width={60} height={60} alt="house" />
@@ -52,7 +52,7 @@ const Avantages = () => {
               </h3>
             </div>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center md:mt-0 mt-7">
             <div className="p-5 rounded-full bg-bluePrimary flex justify-center items-center h-[100px] w-[100px]">
               <Image src="/icons/hand.png" width={60} height={60} alt="house" />
             </div>
@@ -63,7 +63,7 @@ const Avantages = () => {
               </h3>
             </div>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center md:mt-0 mt-7">
             <div className="p-5 rounded-full bg-bluePrimary flex justify-center items-center h-[100px] w-[100px]">
               <Image
                 src="/icons/smiley.png"
