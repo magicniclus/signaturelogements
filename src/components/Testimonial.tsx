@@ -38,7 +38,7 @@ const Testimonial = () => {
   }, []);
 
   return (
-    <section className="w-full bg-greenPrimary carousel-contant-container overflow-hidden">
+    <section className="w-full bg-greenPrimary carousel-contant-container overflow-hidden md:block hidden">
       <div className="max-w-7xl mx-auto py-16 px-7 md:px-0 flex items-center flex-col">
         <h2 className="text-white w-full text-[40px] font-bold text-center carousel-content">
           100%
