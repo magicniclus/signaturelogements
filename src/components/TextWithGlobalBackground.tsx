@@ -28,7 +28,7 @@ const TextWithGlobalBackground = () => {
   return (
     <section className="w-full bg-[url('/images/interieur.jpg')] bg-no-repeat bg-cover bg-center mt-16 text-with-global-background overflow-hidden">
       <div className="max-w-7xl w-full mx-auto flex md:flex-row flex-col h-full">
-        <div className="w-full md:w-6/12 h-full bg-bluePrimary py-28 px-16 ">
+        <div className="w-full md:w-6/12 h-full bg-bluePrimary py-28 px-10 md:px-16 ">
           <h2 className="text-white w-full text-[40px] font-bold leading-[50px] text-with-global-background-container">
             Des volumes généreux
             <span className="text-greenPrimary"> et ouverts sur la nature</span>
