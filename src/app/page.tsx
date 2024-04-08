@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Nav nav={true} />
-      <main>
+      <main className="font-typedynamic">
         <Hero />
         <Charm />
         <Programme />
