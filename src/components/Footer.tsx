@@ -22,19 +22,19 @@ const Footer = () => {
             </a>
           </p>
         </div>
-        <div className="flex flex-col md:h-[180px] justify-between md:mt-0 mt-10">
-          <p className="text-white text-[30px] font-bold text-center mt-10">
+        <div className="flex flex-col md:h-[180px] justify-between md:mt-0 mt-10 items-center">
+          <p className="text-white text-[28px] font-bold text-center mt-10">
             Je veux être contacté
           </p>
           <Button
             href="#form"
             value="Contactez-moi"
-            className="bg-orange text-white md:h-[83px] w-[287px] md:mt-11 mt-8"
+            className="bg-orange text-white md:h-[83px] w-[287px] md:mt-0 mt-8"
           />
         </div>
-        <div className="flex flex-col md:h-[180px] justify-between md:mt-0 mt-10">
-          <p className="text-white text-[30px] font-bold text-center mt-10">
-            Je préfère vous <br /> appeler
+        <div className="flex flex-col md:h-[180px] justify-between md:mt-0 mt-10 items-center">
+          <p className="text-white text-[28px] font-bold text-center mt-10">
+            Je préfère vous appeler
           </p>
           <Button
             href="tel:0556367038"
