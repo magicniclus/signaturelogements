@@ -93,24 +93,24 @@ const Hero = () => {
 
   return (
     <section className="w-full md:bg-[url('/images/vague.png')] bg-no-repeat bg-cover bg-bottom flex flex-col relative hero overflow-hidden">
-      <div className="md:hidden flex h-[1000px] bg-[url('/images/vagueBig.png')] bg-no-repeat bg-cover bg-top"></div>
+      <div className="md:hidden flex h-[1000px] bg-[url('/images/vagueBig.jpg')] bg-no-repeat bg-cover bg-top"></div>
       <div className="max-w-7xl md:px-4 min-h-[667px] flex justify-center items-end mx-auto w-full md:relative absolute -bottom-0">
         <form
           id="form"
           onSubmit={handleSubmit}
           className="bg-bluePrimary rounded-t-full md:rounded-full p-5 flex w-full md:w-[522px] md:h-[522px] max-w-full flex-col items-center text-center relative"
         >
-          <h1 className="text-[40px] md:text-[55px] text-center text-white leading-[50px] mt-14 md:mt-5">
+          <h1 className="text-[35px] font-medium md:text-[55px] text-center text-white leading-[50px] mt-14 md:mt-5">
             Devenez <br /> propriétaire <br />{" "}
-            <span className="text-[30px] font-light">sur la</span> <br />{" "}
-            <span className="text-greenPrimary text-[45px] md:text-[60px] font-semibold">
+            <span className="text-[16px] font-light">sur la</span> <br />{" "}
+            <span className="text-greenPrimary text-[50px] md:text-[60px] font-semibold">
               Côte Atlantique
             </span>
           </h1>
-          <h2 className="font-bold text-[21px] text-white mt-3">
+          <h2 className="font-bold text-[16px] text-white mt-3">
             Besoin de renseignements ?
           </h2>
-          <p className="text-white text-[20px] leading-[20px] mb-3">
+          <p className="text-white text-[16px] leading-[20px] mb-3">
             On vous recontacte !
           </p>
           {step === 1 && (
@@ -119,7 +119,7 @@ const Hero = () => {
               value={email}
               onChange={handleEmailChange}
               placeholder="Votre email"
-              className="p-3 rounded-full w-[290px] md:w-[342px] rounded-lg mt-3 h-[33px]"
+              className="p-3 rounded-full w-[290px] md:w-[342px] rounded-full md:rounded-lg mt-3 h-[64px] md:h-[33px]"
             />
           )}
           {step === 2 && (
@@ -127,7 +127,7 @@ const Hero = () => {
               type="text"
               value={name}
               onChange={handleNameChange}
-              className="p-3 rounded-full w-[290px] md:w-[342px] rounded-lg mt-3 h-[33px]"
+              className="p-3 rounded-full w-[290px] md:w-[342px] rounded-full md:rounded-lg mt-3 h-[64px] md:h-[33px]"
               placeholder="Votre nom"
             />
           )}
@@ -136,7 +136,7 @@ const Hero = () => {
               <input
                 type="text"
                 placeholder="Téléphone"
-                className="p-3 rounded-full w-[290px] md:w-[342px] rounded-lg mt-3 h-[33px]"
+                className="p-3 rounded-full w-[290px] md:w-[342px] rounded-full md:rounded-lg mt-3 h-[64px] md:h-[33px]"
                 value={phone}
                 onChange={handlePhoneChange}
               />
