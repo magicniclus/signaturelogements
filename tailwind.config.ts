@@ -19,7 +19,7 @@ const config = {
     },
     extend: {
       fontFamily: {
-        typedynamic: ["TypeDynamic-Larsseit", "sans-serif"],
+        larsseit: ["larsseit", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {
