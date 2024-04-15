@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { ChangeEvent, useEffect, useState } from "react";
-import { writeUserData } from "../firebase/datamanager";
+import { writeCRMUserData, writeUserData } from "../firebase/datamanager";
 
 import gsap from "gsap";
 
@@ -79,8 +79,16 @@ const Hero = () => {
       const userId = Date.now().toString();
       writeUserData(email, name, phone, userId)
         .then((response) => {
-          console.log(response);
-          router.push("/merci");
+          writeCRMUserData(email, name, phone)
+            .then((response) => {
+              router.push("/merci");
+            })
+            .catch((error) => {
+              console.error(error);
+              setErrorMessage(
+                "Une erreur est survenue lors de l'envoi des données."
+              );
+            });
         })
         .catch((error) => {
           console.error(error);
