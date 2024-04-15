@@ -9,7 +9,7 @@ const page = () => {
         <h1 className="text-bluePrimary text-[40px] md:text-[55px] text-center leading-[50px] mt-14 md:mt-5">
           Merci,
         </h1>
-        <h2 className="text-bluePrimary font-bold text-[21px] mt-3">
+        <h2 className="text-bluePrimary font-bold text-[21px] mt-3 text-center">
           Nous vous recontacterons très prochainement
         </h2>
       </main>
