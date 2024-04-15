@@ -42,7 +42,7 @@ const Nav = ({ nav }: NavProps) => {
                   <a href="#adresses">Les adresses</a>
                 </li>
                 <li className="mr-4">
-                  <a href="#adresses">Les logements</a>
+                  <a href="#volumes">Les logements</a>
                 </li>
                 <li>
                   <a href="#engagement">Nos engagements</a>
