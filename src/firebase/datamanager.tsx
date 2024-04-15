@@ -25,17 +25,21 @@ export function writeUserData(
   });
 }
 
-export function writeCRMUserData(email: string) {
+export function writeCRMUserData(email: string, name: string, phone: string) {
   const dateEtHeure = new Date().toISOString();
 
   // Structure des données pour l'API
   const contactData = {
+    nom: name,
+    prenom: name,
+    telephone_mobile: phone,
     email: email,
+    code_postal: "33000",
 
     demande: {
       date: dateEtHeure,
       id_programme: 28,
-      id_provenance: 22,
+      id_provenance: 157,
     },
   };
 
