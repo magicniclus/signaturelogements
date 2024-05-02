@@ -38,7 +38,6 @@ export function writeCRMUserData(email: string, name: string, phone: string) {
 
     demande: {
       date: dateEtHeure,
-      id_programme: 28,
       id_provenance: 157,
     },
   };
