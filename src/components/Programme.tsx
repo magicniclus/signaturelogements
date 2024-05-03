@@ -90,7 +90,7 @@ const Programme = () => {
       zip: "33680",
       list: [
         "En plein centre-bourg",
-        "Appartements 2 à 4 p. + maisons 3 ou 4 p.",
+        "Appartements 2 à 4 p.",
         "À partir de 224 000 €",
       ],
       image: "/images/lacanau-ville.jpg",
