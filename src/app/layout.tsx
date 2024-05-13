@@ -19,7 +19,7 @@ export default function RootLayout({
         <link rel="icon" href="/logo.png" sizes="any" />
       </head>
       <body className={larsseit.className}>{children}</body>
-      <GoogleTagManager gtmId="GTM-5GNQ636R" />
+      <GoogleTagManager gtmId="GTM-5QJNDDV6" />
     </html>
   );
 }
