@@ -175,6 +175,7 @@ const Hero = () => {
           {step === 3 && (
             <button
               type="submit"
+              id="submit"
               disabled={!canProceed()}
               className="p-5 rounded-full border border-white flex justify-center items-center bg-orange text-white mb-10 px-10 w-[290px] md:min-w-[342px] md:px-16 text-[20px] md:hidden flex md:mt-0 mt-5"
             >
