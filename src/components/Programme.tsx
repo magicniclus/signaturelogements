@@ -36,16 +36,6 @@ const Programme = () => {
 
   const programmeList = [
     {
-      city: "Lège-Cap Ferret",
-      zip: "33950",
-      list: [
-        "Au cœur d’un espace boisé",
-        "Maison de 3 ou 4 pièces",
-        "À partir de 453 000 €",
-      ],
-      image: "/images/lege.jpg",
-    },
-    {
       city: "Gujan-Mestras",
       zip: "33470",
       list: [
@@ -54,16 +44,6 @@ const Programme = () => {
         "À partir de 264 000 €",
       ],
       image: "/images/lestran.jpg",
-    },
-    {
-      city: "Lacanau Océan",
-      zip: "33680",
-      list: [
-        "À 300 m. de la plage océanique",
-        "Appartements de 1 à 5 pièces",
-        "À partir de 196 000 €",
-      ],
-      image: "/images/lacanau-ocean.jpg",
     },
     {
       city: "Breuillet",
@@ -86,7 +66,7 @@ const Programme = () => {
       image: "/images/carcans.jpg",
     },
     {
-      city: "Lacanau Ville",
+      city: "Lacanau",
       zip: "33680",
       list: [
         "En plein centre-bourg",
