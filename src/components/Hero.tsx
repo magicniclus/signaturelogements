@@ -1,9 +1,8 @@
 "use client";
+import gsap from "gsap";
 import { useRouter } from "next/navigation";
 import { ChangeEvent, useEffect, useState } from "react";
 import { writeCRMUserData, writeUserData } from "../firebase/datamanager";
-
-import gsap from "gsap";
 
 const Hero = () => {
   const router = useRouter();
@@ -73,29 +72,18 @@ const Hero = () => {
     }
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async (event?: React.FormEvent<HTMLFormElement>) => {
     event?.preventDefault();
     if (canProceed()) {
       const userId = Date.now().toString();
-      writeUserData(email, name, phone, userId)
-        .then((response) => {
-          writeCRMUserData(email, name, phone)
-            .then((response) => {
-              router.push("/merci");
-            })
-            .catch((error) => {
-              console.error(error);
-              setErrorMessage(
-                "Une erreur est survenue lors de l'envoi des données."
-              );
-            });
-        })
-        .catch((error) => {
-          console.error(error);
-          setErrorMessage(
-            "Une erreur est survenue lors de l'envoi des données."
-          );
-        });
+      try {
+        await writeUserData(email, name, phone, userId);
+        await writeCRMUserData(email, name, phone);
+        router.push("/merci");
+      } catch (error) {
+        console.error(error);
+        setErrorMessage("Une erreur est survenue lors de l'envoi des données.");
+      }
     }
   };
 
