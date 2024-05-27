@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-bluePrimary">
+    <footer className="w-full bg-bluePrimary flex flex-col">
       <div className="max-w-7xl mx-auto w-full py-16 px-7 flex justify-between items-center lg:flex-row flex-col h-full">
         <div className="flex flex-col">
           <Image
@@ -42,6 +42,19 @@ const Footer = () => {
             className="bg-orange text-white md:h-[83px] w-[287px] md:mt-0 mt-8"
           />
         </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto w-full py-16 px-7 flex justify-between items-center lg:flex-row flex-col h-full">
+        <p className="text-white text-xs">
+          *Offre commerciale exceptionnelle appliquée sur les prochains contrats
+          de réservation signés entre le 22/05/2024 et le 30/06/2024 inclus,
+          dans le cadre de l’achat d’un logement neuf au sein d’un programme
+          réalisé par Signature Promotion. Conditions et liste des lots
+          éligibles à consulter auprès de votre conseiller Signature Promotion.
+          Cette offre est cumulable avec les autres offres Signature Promotion
+          en cours ou à venir sur la période susvisée et pourra éventuellement
+          être prolongée, sous conditions.
+        </p>
       </div>
     </footer>
   );
