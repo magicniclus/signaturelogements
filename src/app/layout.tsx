@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <head>
-        <link rel="icon" href="/logo.png" sizes="any" />
+        <link rel="icon" href="/logotop.png" sizes="any" type="image/png" />
       </head>
       <body className={larsseit.className}>{children}</body>
       <GoogleTagManager gtmId="GTM-5QJNDDV6" />
