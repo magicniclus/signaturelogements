@@ -47,7 +47,8 @@ const Charm = () => {
             </li>
             <li className="text-[20px] text-white list-disc mt-2">
               Le <span className="font-bold">Bassin d’Arcachon</span>, ses ports
-              ostréicoles à Gujan-Mestras et sa presque’île à Lège-Cap Ferret,
+              ostréicoles à Gujan-Mestras son art de vivre et ses lieux
+              d&apos;exception,
             </li>
             <li className="text-[20px] text-white list-disc mt-2">
               La Côte <span className="font-bold">Médoc Atlantique</span> entre
