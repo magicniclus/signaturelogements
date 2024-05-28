@@ -88,7 +88,7 @@ const Programme = () => {
             return (
               <div
                 key={index}
-                className="w-full mt-10 flex flex-col md:w-[30%] w-full"
+                className="w-full mt-10 flex flex-col md:w-[46%] w-full"
               >
                 <div
                   className={`w-full h-[247px] rounded-lg`}
