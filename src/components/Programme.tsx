@@ -70,7 +70,7 @@ const Programme = () => {
       zip: "33680",
       list: [
         "En plein centre-bourg",
-        "Appartements 2 à 4 p.",
+        "Appartements de 2 ou 4 pièces",
         "À partir de 224 000 €",
       ],
       image: "/images/lacanau-ville.jpg",
@@ -91,7 +91,7 @@ const Programme = () => {
                 className="w-full mt-10 flex flex-col md:w-[46%] w-full"
               >
                 <div
-                  className={`w-full h-[247px] rounded-lg`}
+                  className={`w-full h-[350px] rounded-lg`}
                   style={{
                     backgroundImage: `url(${programme.image})`,
                     backgroundSize: "cover",
