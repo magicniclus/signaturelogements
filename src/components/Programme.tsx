@@ -36,6 +36,26 @@ const Programme = () => {
 
   const programmeList = [
     {
+      city: "Carcans",
+      zip: "33121",
+      list: [
+        "En plein centre-bourg",
+        "Appartements de 1 à 3 pièces",
+        "S’inscrire pour recevoir les informations en avant-première",
+      ],
+      image: "/images/carcans.jpg",
+    },
+    {
+      city: "Lacanau",
+      zip: "33680",
+      list: [
+        "En plein centre-bourg",
+        "Appartements de 2 ou 4 pièces",
+        "À partir de 224 000 €",
+      ],
+      image: "/images/lacanau-ville.jpg",
+    },
+    {
       city: "Gujan-Mestras",
       zip: "33470",
       list: [
@@ -54,26 +74,6 @@ const Programme = () => {
         "À partir de 250 000 €",
       ],
       image: "/images/cambium.jpg",
-    },
-    {
-      city: "Carcans",
-      zip: "33121",
-      list: [
-        "En plein centre-bourg",
-        "Appartements de 2 ou 3 pièces",
-        "À partir de 189 000 €",
-      ],
-      image: "/images/carcans.jpg",
-    },
-    {
-      city: "Lacanau",
-      zip: "33680",
-      list: [
-        "En plein centre-bourg",
-        "Appartements de 2 ou 4 pièces",
-        "À partir de 224 000 €",
-      ],
-      image: "/images/lacanau-ville.jpg",
     },
   ];
   return (
