@@ -1,5 +1,7 @@
 import localFont from "next/font/local";
 
+import { Libre_Baskerville } from "@next/font/google";
+
 // Remplacez les chemins et les configurations selon vos fichiers de police spécifiques
 const larsseit = localFont({
   src: [
@@ -73,4 +75,11 @@ const larsseit = localFont({
   variable: "--font-larsseit",
 });
 
-export { larsseit };
+const libreBaskerville = Libre_Baskerville({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
+export { larsseit, libreBaskerville };
