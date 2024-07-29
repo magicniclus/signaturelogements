@@ -20,6 +20,7 @@ const config = {
     extend: {
       fontFamily: {
         larsseit: ["larsseit", "sans-serif"],
+        libre: ['"Libre Baskerville"', "serif"],
       },
       keyframes: {
         "accordion-down": {
@@ -37,11 +38,11 @@ const config = {
       },
     },
     colors: {
-      orange: "#D66542",
-      bluePrimary: "#1D2749",
+      orange: "#FCAF43",
+      bluePrimary: "#73CAC4",
       greenPrimary: "#7BA28A",
       white: "#FFFFFF",
-      yellowPrimary: "#C8A84D",
+      yellowPrimary: "#FFE042",
     },
   },
   plugins: [require("tailwindcss-animate")],
