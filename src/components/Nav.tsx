@@ -27,32 +27,32 @@ const Nav = ({ nav }: NavProps) => {
 
   return (
     <header className="w-full header">
-      <div className="max-w-7xl px-4 py-5 flex lg:justify-between justify-center mx-auto">
+      <div className="px-4 md:px-7 py-7 flex lg:justify-between justify-center mx-auto">
         <a href="/">
           <Image src="/logos/logo.png" alt="logo" width={250} height={80} />
         </a>
         {nav && (
           <div className="flex items-center lg:flex hidden">
             <nav className=" px-4 py-2 bg-bluePrimary text-white rounded-full mr-5">
-              <ul className="flex space-x-4">
+              <ul className="flex space-x-4 font-larsseit">
                 <li className="">
-                  <a href="#atlantique">Côté atlantique</a>
+                  <a href="#atlantique">Ventes privilèges</a>
                 </li>
                 <li className="mr-4">
-                  <a href="#adresses">Les adresses</a>
+                  <a href="#adresses">La résidence</a>
                 </li>
                 <li className="mr-4">
-                  <a href="#volumes">Les logements</a>
+                  <a href="#volumes">Les appartements</a>
                 </li>
                 <li>
-                  <a href="#engagement">Nos engagements</a>
+                  <a href="#engagement">Carcans</a>
                 </li>
               </ul>
             </nav>
             <Button
               href="#form"
               value="Contactez-moi"
-              className="bg-orange text-white max-h-[50px]"
+              className="bg-orange text-white max-h-[50px] font-larsseit"
             />
           </div>
         )}
