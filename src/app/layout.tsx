@@ -1,10 +1,10 @@
 import { GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import "./globals.css";
-import { larsseit } from "./styles/font";
+import { libreBaskerville } from "./styles/font";
 
 export const metadata: Metadata = {
-  title: "Nos programme sur la côte Atlantique",
+  title: "Nos programmes sur la côte Atlantique",
   description: "Découvrez nos programmes immobiliers sur la côte Atlantique",
 };
 
@@ -18,8 +18,10 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/logotop.png" sizes="any" type="image/png" />
       </head>
-      <body className={larsseit.className}>{children}</body>
-      <GoogleTagManager gtmId="GTM-5QJNDDV6" />
+      <body className={`${libreBaskerville.className}`}>
+        {children}
+        <GoogleTagManager gtmId="GTM-5QJNDDV6" />
+      </body>
     </html>
   );
 }
