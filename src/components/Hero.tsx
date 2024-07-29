@@ -1,4 +1,4 @@
-"use client";
+/* eslint-disable @next/next/no-img-element */
 import gsap from "gsap";
 import { useRouter } from "next/navigation";
 import { ChangeEvent, useEffect, useState } from "react";
@@ -88,19 +88,23 @@ const Hero = () => {
   };
 
   return (
-    <section className="w-full md:bg-[url('/images/vague.png')] bg-no-repeat bg-cover bg-bottom flex flex-col relative hero overflow-hidden">
-      <div className="md:hidden flex h-[1000px] bg-[url('/images/vagueBig.jpg')] bg-no-repeat bg-cover bg-top"></div>
-      <div className="max-w-7xl md:px-4 min-h-[667px] flex justify-center items-end mx-auto w-full md:relative absolute -bottom-0">
+    <section className="w-full bg-[url('/images/paddle.png')] bg-no-repeat bg-cover bg-bottom flex flex-col relative hero overflow-hidden">
+      <div className="md:px-0 md:min-h-[667px] min-h-[] flex justify-between items-end mx-auto w-full relative max-w-7xl mx-auto">
+        <img
+          src="/images/3d.png"
+          alt="3d"
+          className="h-[152px] w-auto mb-32 hidden md:block"
+        />
         <form
           id="form"
           onSubmit={handleSubmit}
-          className="bg-bluePrimary rounded-t-full md:rounded-full p-5 flex w-full md:w-[522px] md:h-[522px] max-w-full flex-col items-center text-center relative"
+          className="bg-bluePrimary md:rounded-md p-3 border border-white flex w-full md:w-[370px] md:h-[522px] h-full max-w-full flex-col items-center text-center relative"
         >
-          <h1 className="text-[35px] font-medium md:text-[55px] text-center text-white leading-[50px] mt-14 md:mt-5">
+          <h1 className="text-[35px] font-medium md:text-[55px] text-center text-white leading-[50px]">
             Devenez <br /> propriétaire <br />{" "}
-            <span className="text-[16px] font-light">sur la</span> <br />{" "}
-            <span className="text-greenPrimary text-[50px] md:text-[60px] font-semibold">
-              Côte Atlantique
+            <span className="text-[24px] font-light">à</span> <br />{" "}
+            <span className="text-yellowPrimary text-[50px] md:text-[60px] font-libre font-semibold">
+              Carcans
             </span>
           </h1>
           <h2 className="font-bold text-[16px] text-white mt-3">
@@ -115,7 +119,7 @@ const Hero = () => {
               value={email}
               onChange={handleEmailChange}
               placeholder="Votre email"
-              className="p-3 rounded-full w-[290px] md:w-[342px] rounded-full md:rounded-lg mt-3 h-[64px] md:h-[33px]"
+              className="p-3 rounded-full w-[290px] md:w-[342px] mt-3 h-[44px] md:h-[33px] mb-5 md:mb-0"
             />
           )}
           {step === 2 && (
@@ -123,7 +127,7 @@ const Hero = () => {
               type="text"
               value={name}
               onChange={handleNameChange}
-              className="p-3 rounded-full w-[290px] md:w-[342px] rounded-full md:rounded-lg mt-3 h-[64px] md:h-[33px]"
+              className="p-3 rounded-full w-[290px] md:w-[342px] mt-3 h-[44px] md:h-[33px] mb-5 md:mb-0"
               placeholder="Votre nom"
             />
           )}
@@ -132,11 +136,11 @@ const Hero = () => {
               <input
                 type="text"
                 placeholder="Téléphone"
-                className="p-3 rounded-full w-[290px] md:w-[342px] rounded-full md:rounded-lg mt-3 h-[64px] md:h-[33px]"
+                className="p-3 rounded-full w-[290px] md:w-[342px] mt-3 h-[44px] md:h-[33px] mb-5 md:mb-0"
                 value={phone}
                 onChange={handlePhoneChange}
               />
-              <div className="flex mb-5 md:mb-20 items-start mt-3 max-w-[70%]">
+              <div className="flex mb-5  items-start mt-3">
                 <input
                   type="checkbox"
                   className="bg-white mt-0.5 text-[15px]"
@@ -149,15 +153,15 @@ const Hero = () => {
               </div>
             </>
           )}
-          {errorMessage && <div>{errorMessage}</div>}
+          {errorMessage && <div className="text-red-500">{errorMessage}</div>}
           {step < 3 && (
             <button
               type="button"
               onClick={handleNextClick}
               disabled={!canProceed()}
-              className="p-5 rounded-full border border-white flex justify-center items-center bg-orange text-white mb-10 px-10 w-[290px] md:min-w-[342px] md:px-16 text-[20px] md:hidden flex md:mt-0 mt-5"
+              className="p-2 rounded-full border border-white flex justify-center items-center bg-orange text-white mb-10 px-10 w-[290px] md:min-w-[342px] md:px-16 text-[20px] md:hidden flex"
             >
-              Je veux être contacté
+              Contactez-moi
             </button>
           )}
           {step === 3 && (
@@ -165,9 +169,9 @@ const Hero = () => {
               type="submit"
               id="submit"
               disabled={!canProceed()}
-              className="p-5 rounded-full border border-white flex justify-center items-center bg-orange text-white mb-10 px-10 w-[290px] md:min-w-[342px] md:px-16 text-[20px] md:hidden flex md:mt-0 mt-5"
+              className="p-2 rounded-full border border-white flex justify-center items-center bg-orange text-white mb-10 px-10 w-[290px] md:min-w-[342px] md:px-16 text-[20px] flex md:hidden"
             >
-              Je veux être contacté
+              Contactez-moi
             </button>
           )}
           {step < 3 && (
@@ -175,9 +179,9 @@ const Hero = () => {
               type="button"
               onClick={handleNextClick}
               disabled={!canProceed()}
-              className="p-5 rounded-full border border-white flex justify-center items-center bg-orange text-white absolute bottom-[-0px] px-16 text-[30px] md:flex hidden md:mt-0 mt-5"
+              className="p-2 rounded-full border border-white flex justify-center items-center bg-orange text-white px-10 md:px-16 text-[30px] md:flex hidden mt-20"
             >
-              Je veux être contacté
+              Contactez-moi
             </button>
           )}
           {step === 3 && (
@@ -185,9 +189,9 @@ const Hero = () => {
               type="submit"
               id="submit"
               disabled={!canProceed()}
-              className="p-5 rounded-full border border-white flex justify-center items-center bg-orange text-white absolute bottom-[-0px] px-16 text-[30px] md:flex hidden md:mt-0 mt-5"
+              className="p-2 rounded-full border border-white flex justify-center items-center bg-orange text-white px-10 md:px-16 text-[30px] md:flex hidden"
             >
-              Je veux être contacté
+              Contactez-moi
             </button>
           )}
         </form>
