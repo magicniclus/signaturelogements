@@ -38,11 +38,11 @@ const Testimonial = () => {
   }, []);
 
   return (
-    <section className="w-full bg-greenPrimary carousel-contant-container overflow-hidden md:block hidden">
+    <section className="w-full carousel-contant-container overflow-hidden md:block hidden">
       <div className="max-w-7xl mx-auto py-16 px-7 md:px-0 flex items-center flex-col">
-        <h2 className="text-white w-full text-[40px] font-bold text-center carousel-content">
+        <h2 className="text-[#1D2749] w-full text-[40px] font-bold text-center carousel-content">
           100%
-          <span className="text-bluePrimary">
+          <span className="text-[#1D2749]">
             {" "}
             de nos clients nous recommandent
           </span>
@@ -52,14 +52,14 @@ const Testimonial = () => {
             <CarouselContent>
               <CarouselItem>
                 <div className="flex items-center justify-center">
-                  <div className="h-[100px] w-[100px] flex justify-center items-center bg-orange rounded-full">
+                  <div className="h-[100px] w-[100px] flex justify-center items-center bg-[#D66542] rounded-full">
                     <p className="text-white text-[43px]">M</p>
                   </div>
                   <div className="w-9/12 flex flex-col ml-5">
-                    <h3 className="text-bluePrimary text-[20px] font-bold">
+                    <h3 className="text-[#1D2749] text-[20px] font-bold">
                       « ACCUEUIL SYMPATHIQUE ET PROFESSIONNEL »
                     </h3>
-                    <p className="text-bluePrimary text-[20px]">
+                    <p className="text-[#1D2749] text-[20px]">
                       Entreprise très sérieuse Nous apprécions d’être tenus
                       informés régulièrement sur l’avancement des travaux Très
                       bon accueil à chaque rencontre avec un personnel très
@@ -70,14 +70,14 @@ const Testimonial = () => {
               </CarouselItem>
               <CarouselItem>
                 <div className="flex items-center justify-center">
-                  <div className="h-[100px] w-[100px] flex justify-center items-center bg-orange rounded-full">
+                  <div className="h-[100px] w-[100px] flex justify-center items-center bg-[#D66542] rounded-full">
                     <p className="text-white text-[43px]">L</p>
                   </div>
                   <div className="w-9/12 flex flex-col ml-5">
-                    <h3 className="text-bluePrimary text-[20px] font-bold">
+                    <h3 className="text-[#1D2749] text-[20px] font-bold">
                       « Professionnel et compétent »
                     </h3>
-                    <p className="text-bluePrimary text-[20px]">
+                    <p className="text-[#1D2749] text-[20px]">
                       Très agréable accompagnement et travail qui nous convient
                       très bien. Merci.
                     </p>
@@ -86,14 +86,14 @@ const Testimonial = () => {
               </CarouselItem>
               <CarouselItem>
                 <div className="flex items-center justify-center carousel-content">
-                  <div className="h-[100px] w-[100px] flex justify-center items-center bg-orange rounded-full">
+                  <div className="h-[100px] w-[100px] flex justify-center items-center bg-[#D66542] rounded-full">
                     <p className="text-white text-[43px]">G</p>
                   </div>
                   <div className="w-9/12 flex flex-col ml-5">
-                    <h3 className="text-bluePrimary text-[20px] font-bold">
+                    <h3 className="text-[#1D2749] text-[20px] font-bold">
                       « Agence très compétente »
                     </h3>
-                    <p className="text-bluePrimary text-[20px]">
+                    <p className="text-[#1D2749] text-[20px]">
                       Bon accueil, personnel sérieux et professionnel, réponse
                       rapide à nos questions.
                     </p>
@@ -102,14 +102,14 @@ const Testimonial = () => {
               </CarouselItem>
               <CarouselItem>
                 <div className="flex items-center justify-center">
-                  <div className="h-[100px] w-[100px] flex justify-center items-center bg-orange rounded-full">
+                  <div className="h-[100px] w-[100px] flex justify-center items-center bg-[#D66542] rounded-full">
                     <p className="text-white text-[43px]">I</p>
                   </div>
                   <div className="w-9/12 flex flex-col ml-5">
-                    <h3 className="text-bluePrimary text-[20px] font-bold">
+                    <h3 className="text-[#1D2749] text-[20px] font-bold">
                       « BIEN »
                     </h3>
-                    <p className="text-bluePrimary text-[20px]">
+                    <p className="text-[#1D2749] text-[20px]">
                       Jusqu’à présent tout c’est très bien passé. Efficacité des
                       différentes personnes, cordialité… Le projet est bien
                       avancé dans les temps annoncés. L’organisation fonctionne
@@ -120,14 +120,14 @@ const Testimonial = () => {
               </CarouselItem>
               <CarouselItem>
                 <div className="flex items-center justify-center">
-                  <div className="h-[100px] w-[100px] flex justify-center items-center bg-orange rounded-full">
+                  <div className="h-[100px] w-[100px] flex justify-center items-center bg-[#D66542] rounded-full">
                     <p className="text-white text-[43px]">M</p>
                   </div>
                   <div className="w-9/12 flex flex-col ml-5">
-                    <h3 className="text-bluePrimary text-[20px] font-bold">
+                    <h3 className="text-[#1D2749] text-[20px] font-bold">
                       « ACCUEUIL SYMPATHIQUE ET PROFESSIONNEL »
                     </h3>
-                    <p className="text-bluePrimary text-[20px]">
+                    <p className="text-[#1D2749] text-[20px]">
                       Entreprise très sérieuse Nous apprécions d’être tenus
                       informés régulièrement sur l’avancement des travaux Très
                       bon accueil à chaque rencontre avec un personnel très
@@ -138,14 +138,14 @@ const Testimonial = () => {
               </CarouselItem>
               <CarouselItem>
                 <div className="flex items-center justify-center">
-                  <div className="h-[100px] w-[100px] flex justify-center items-center bg-orange rounded-full">
+                  <div className="h-[100px] w-[100px] flex justify-center items-center bg-[#D66542] rounded-full">
                     <p className="text-white text-[43px]">A</p>
                   </div>
                   <div className="w-9/12 flex flex-col ml-5">
-                    <h3 className="text-bluePrimary text-[20px] font-bold">
+                    <h3 className="text-[#1D2749] text-[20px] font-bold">
                       « Professionnel et compétent »
                     </h3>
-                    <p className="text-bluePrimary text-[20px]">
+                    <p className="text-[#1D2749] text-[20px]">
                       Très agréable accompagnement et travail qui nous convient
                       très bien. Merci.
                     </p>
@@ -158,13 +158,13 @@ const Testimonial = () => {
           </Carousel>
         </div>
         <div className="flex mt-7 carousel-content">
-          <StarIcon className="w-[24px] h-auto text-yellowPrimary" />
-          <StarIcon className="w-[24px] h-auto text-yellowPrimary ml-2" />
-          <StarIcon className="w-[24px] h-auto text-yellowPrimary ml-2" />
-          <StarIcon className="w-[24px] h-auto text-yellowPrimary ml-2" />
-          <StarIcon className="w-[24px] h-auto text-yellowPrimary ml-2" />
+          <StarIcon className="w-[24px] h-auto text-[#FFE042]" />
+          <StarIcon className="w-[24px] h-auto text-[#FFE042] ml-2" />
+          <StarIcon className="w-[24px] h-auto text-[#FFE042] ml-2" />
+          <StarIcon className="w-[24px] h-auto text-[#FFE042] ml-2" />
+          <StarIcon className="w-[24px] h-auto text-[#FFE042] ml-2" />
         </div>
-        <p className="mt-3 text-bluePrimary text-[16px] text-center carousel-content">
+        <p className="mt-3 text-[#1D2749] text-[16px] text-center carousel-content">
           Visite cloisons, avis déposé le 23 novembre 2023
         </p>
         <Image
