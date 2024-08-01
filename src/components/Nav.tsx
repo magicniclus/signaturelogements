@@ -39,13 +39,13 @@ const Nav = ({ nav }: NavProps) => {
                   <a href="#atlantique">Ventes privilèges</a>
                 </li>
                 <li className="mr-4">
-                  <a href="#adresses">La résidence</a>
+                  <a href="#residence">La résidence</a>
                 </li>
                 <li className="mr-4">
-                  <a href="#volumes">Les appartements</a>
+                  <a href="#residence">Les appartements</a>
                 </li>
                 <li>
-                  <a href="#engagement">Carcans</a>
+                  <a href="#volumes">Carcans</a>
                 </li>
               </ul>
             </nav>
