@@ -19,7 +19,7 @@ const Visite = () => {
           />
         </div>
       </div>
-      <div className="px-8 max-w-7xl mx-auto flex flex-col">
+      <div className="px-8 max-w-7xl mx-auto flex flex-col" id="residence">
         <h2 className="font-bold text-[43px] text-[#1D2749]">
           Résidence nouvelle{" "}
           <span className="text-[#FCAF43]">entre plages et pins maritimes</span>{" "}
