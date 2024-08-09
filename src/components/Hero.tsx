@@ -77,9 +77,26 @@ const Hero = () => {
     if (canProceed()) {
       const userId = Date.now().toString();
       try {
+        // Enregistrez les données utilisateur
         await writeUserData(email, name, phone, userId);
         await writeCRMUserData(email, name, phone);
-        router.push("/merci");
+
+        // Téléchargement du fichier PDF
+        const response = await fetch("/plaquette.pdf");
+        const blob = await response.blob();
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "plaquette.pdf";
+        document.body.appendChild(link); // Ajouté pour garantir que le lien est dans le DOM
+        link.click();
+
+        // Redirection après un délai pour permettre le téléchargement
+        setTimeout(() => {
+          router.push("/merci");
+        }, 1000); // Délai de 1 seconde
+
+        // Supprimer le lien après le téléchargement pour éviter les fuites de mémoire
+        link.remove();
       } catch (error) {
         console.error(error);
         setErrorMessage("Une erreur est survenue lors de l'envoi des données.");
@@ -93,14 +110,14 @@ const Hero = () => {
         <img
           src="/images/3d.png"
           alt="3d"
-          className="h-[152px] w-auto mb-32 hidden md:block"
+          className="h-[152px] w-auto mb-44 hidden md:block"
         />
         <form
           id="form"
           onSubmit={handleSubmit}
-          className="bg-bluePrimary md:rounded-md p-3 border border-white flex w-full md:w-[370px] md:h-[522px] h-full max-w-full flex-col items-center text-center relative"
+          className="bg-bluePrimary md:rounded-3xl p-5 border border-4 border-white flex w-full md:w-[400px] md:h-[550px] h-full max-w-full flex-col items-center text-center relative"
         >
-          <h1 className="text-[35px] font-medium md:text-[55px] text-center text-white leading-[50px]">
+          <h1 className="text-[35px] mt-3 font-medium md:text-[55px] text-center text-white leading-[50px]">
             Devenez <br /> propriétaire <br />{" "}
             <span className="text-[24px] font-light">à</span> <br />{" "}
             <span className="text-yellowPrimary text-[50px] md:text-[60px] font-libre font-semibold">
@@ -119,7 +136,7 @@ const Hero = () => {
               value={email}
               onChange={handleEmailChange}
               placeholder="Votre email"
-              className="p-3 rounded-full w-[290px] md:w-[342px] mt-3 h-[44px] md:h-[33px] mb-5 md:mb-0"
+              className="p-3 rounded-full w-[290px] md:w-[342px] mt-3 h-[44px] mb-5 md:mb-0"
             />
           )}
           {step === 2 && (
@@ -127,7 +144,7 @@ const Hero = () => {
               type="text"
               value={name}
               onChange={handleNameChange}
-              className="p-3 rounded-full w-[290px] md:w-[342px] mt-3 h-[44px] md:h-[33px] mb-5 md:mb-0"
+              className="p-3 rounded-full w-[290px] md:w-[342px] mt-3 h-[44px] mb-5 md:mb-0"
               placeholder="Votre nom"
             />
           )}
@@ -136,7 +153,7 @@ const Hero = () => {
               <input
                 type="text"
                 placeholder="Téléphone"
-                className="p-3 rounded-full w-[290px] md:w-[342px] mt-3 h-[44px] md:h-[33px] mb-5 md:mb-0"
+                className="p-3 rounded-full w-[290px] md:w-[342px] mt-3 h-[44px] mb-5 md:mb-0"
                 value={phone}
                 onChange={handlePhoneChange}
               />
@@ -159,7 +176,7 @@ const Hero = () => {
               type="button"
               onClick={handleNextClick}
               disabled={!canProceed()}
-              className="p-2 rounded-full border border-white flex justify-center items-center bg-orange text-white mb-10 px-10 w-[290px] md:min-w-[342px] md:px-16 text-[20px] md:hidden flex"
+              className="p-2 rounded-full border-4 border-white flex justify-center items-center bg-orange text-white mb-10 px-10 w-[290px] md:min-w-[342px] md:px-[25px] py-5 w-full text-[20px] md:hidden flex"
             >
               Contactez-moi
             </button>
@@ -169,7 +186,7 @@ const Hero = () => {
               type="submit"
               id="submit"
               disabled={!canProceed()}
-              className="p-2 rounded-full border border-white flex justify-center items-center bg-orange text-white mb-10 px-10 w-[290px] md:min-w-[342px] md:px-16 text-[20px] flex md:hidden"
+              className="p-2 rounded-full border-4 border-white flex justify-center items-center bg-orange text-white mb-10 px-10 w-[290px] md:min-w-[342px] md:px-[25px] py-5 w-full text-[20px] flex md:hidden"
             >
               Contactez-moi
             </button>
@@ -179,7 +196,7 @@ const Hero = () => {
               type="button"
               onClick={handleNextClick}
               disabled={!canProceed()}
-              className="p-2 rounded-full border border-white flex justify-center items-center bg-orange text-white px-10 md:px-16 text-[30px] md:flex hidden mt-20"
+              className="p-2 rounded-full border-4 border-white flex justify-center items-center bg-orange text-white px-10 md:px-[25px] py-5 w-full text-[30px] md:flex hidden mt-14"
             >
               Contactez-moi
             </button>
@@ -189,7 +206,7 @@ const Hero = () => {
               type="submit"
               id="submit"
               disabled={!canProceed()}
-              className="p-2 rounded-full border border-white flex justify-center items-center bg-orange text-white px-10 md:px-16 text-[30px] md:flex hidden"
+              className="p-2 rounded-full border-4 border-white flex justify-center items-center bg-orange text-white px-10 md:px-[25px] py-5 w-full text-[30px] md:flex hidden"
             >
               Contactez-moi
             </button>
