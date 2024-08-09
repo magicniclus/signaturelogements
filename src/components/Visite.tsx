@@ -14,7 +14,7 @@ const Visite = () => {
           </h2>
           <Button
             value="Je veux visiter"
-            className="bg-bluePrimary text-white mt-10 px-10 py-3 max-w-max charm-text"
+            className="bg-bluePrimary text-white mt-10 px-10 py-8 text-[22px] max-w-max charm-text hover:text-[#1D2749]"
             href="#form"
           />
         </div>
