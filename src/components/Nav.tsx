@@ -27,24 +27,24 @@ const Nav = ({ nav }: NavProps) => {
 
   return (
     <header className="w-full header">
-      <div className="px-4 md:px-7 py-7 flex lg:justify-between justify-center mx-auto">
+      <div className="px-4 md:px-7 py-10 flex lg:justify-between justify-center mx-auto">
         <a href="/">
           <Image src="/logos/logo.png" alt="logo" width={250} height={80} />
         </a>
         {nav && (
           <div className="flex items-center lg:flex hidden">
-            <nav className=" px-4 py-2 bg-bluePrimary text-white rounded-full mr-5">
-              <ul className="flex space-x-4 font-larsseit">
-                <li className="">
+            <nav className=" px-[25px] py-[15px] bg-bluePrimary text-white rounded-full mr-5">
+              <ul className="flex space-x-10 font-larsseit text-[22px] font-light">
+                <li className=" hover:text-yellowPrimary transition duration-150 ease-in-out">
                   <a href="#atlantique">Ventes privilèges</a>
                 </li>
-                <li className="mr-4">
+                <li className="mr-4 hover:text-yellowPrimary transition duration-150 ease-in-out">
                   <a href="#residence">La résidence</a>
                 </li>
-                <li className="mr-4">
+                <li className="mr-4 hover:text-yellowPrimary transition duration-150 ease-in-out">
                   <a href="#residence">Les appartements</a>
                 </li>
-                <li>
+                <li className=" hover:text-yellowPrimary transition duration-150 ease-in-out">
                   <a href="#volumes">Carcans</a>
                 </li>
               </ul>
@@ -52,7 +52,7 @@ const Nav = ({ nav }: NavProps) => {
             <Button
               href="#form"
               value="Contactez-moi"
-              className="bg-orange text-white max-h-[50px] font-larsseit"
+              className="bg-orange text-white px-[25px] py-[15px] font-larsseit text-[22px] font-light"
             />
           </div>
         )}
