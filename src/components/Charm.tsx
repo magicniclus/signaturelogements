@@ -104,12 +104,12 @@ const Charm = () => {
           <div className="flex flex-col md:flex-row">
             <Button
               value="Je me renseigne"
-              className="bg-bluePrimary text-white mt-10 px-10 py-3 max-w-max charm-text"
+              className="bg-bluePrimary text-white mt-10 px-10 py-8 text-[22px] max-w-max charm-text hover:text-[#1D2749]"
               href="#form"
             />
             <Button
               value="*Télécharger la grille"
-              className="bg-bluePrimary text-white mt-10 px-10 py-3 max-w-max charm-text ml-0 md:ml-5"
+              className="bg-bluePrimary text-white mt-10 px-10 py-8 text-[22px] max-w-max charm-text ml-0 md:ml-5 hover:text-[#1D2749]"
               href="#form"
             />
           </div>
