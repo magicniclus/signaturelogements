@@ -37,8 +37,8 @@ export function writeCRMUserData(email: string, name: string, phone: string) {
     code_postal: "33000",
     id_provenance: 22,
     // id_provenance_precision: 157,
-    id_programme: 39,
     demande: {
+      id_programme: 39,
       date: dateEtHeure,
     },
   };
