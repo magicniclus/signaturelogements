@@ -53,7 +53,7 @@ const TextWithGlobalBackground = () => {
           </p>
           <Button
             value="Découvrir l’adresse"
-            className="bg-orange text-white mt-5 px-10 py-3 max-w-max charm-text border border-white"
+            className="bg-orange text-white mt-5 px-10 py-8 text-[22px] max-w-max charm-text border border-white hover:text-[#1D2749]"
             href="#form"
           />
         </div>
