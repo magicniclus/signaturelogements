@@ -108,7 +108,7 @@ const Carousel: React.FC = () => {
         <div style={styles.title}>{images[currentIndex].title}</div>
         <Button
           value="En savoir plus"
-          className="bg-bluePrimary text-white mt-3 px-10 py-3 max-w-max charm-text"
+          className="bg-bluePrimary text-white mt-3 px-10 py-8 text-[22px] max-w-max charm-text  hover:text-[#1D2749]"
           href="#form"
         />
       </div>
