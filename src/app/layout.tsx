@@ -17,10 +17,26 @@ export default function RootLayout({
     <html lang="fr">
       <head>
         <link rel="icon" href="/logotop.png" sizes="any" type="image/png" />
+
+        {/* Google tag (gtag.js) */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-HZR4RQ0K73"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-HZR4RQ0K73');
+            `,
+          }}
+        />
       </head>
       <body className={`${libreBaskerville.className}`}>
         {children}
-        <GoogleTagManager gtmId="GTM-5QJNDDV6" />
+        <GoogleTagManager gtmId="GTM-NPNHJT72" />
       </body>
     </html>
   );
