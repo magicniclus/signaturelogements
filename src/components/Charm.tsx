@@ -67,7 +67,7 @@ const Charm = () => {
                   className="w-[201px] absolute h-auto -top-2"
                 />
                 <p className="text-[25px]">au lieu de</p>
-                <h2 className="font-bold text-[48px]">149 100 €*</h2>
+                <h2 className="font-bold text-[48px]">143 850 €*</h2>
               </div>
             </div>
             <div className="flex  justify-between flex-col md:flex-row mt-7">
@@ -82,7 +82,7 @@ const Charm = () => {
                   className="w-[201px] absolute h-auto -top-2"
                 />
                 <p className="text-[25px]">au lieu de</p>
-                <h2 className="font-bold text-[48px]">175 350 €*</h2>
+                <h2 className="font-bold text-[48px]">170 100 €*</h2>
               </div>
             </div>
             <div className="flex justify-between flex-col md:flex-row mt-7">
