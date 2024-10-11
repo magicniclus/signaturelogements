@@ -105,7 +105,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="w-full bg-[url('/images/paddle.png')] bg-no-repeat bg-cover bg-bottom flex flex-col relative hero overflow-hidden">
+    <section className="w-full bg-[url('/images/CC01.png')] bg-no-repeat bg-cover bg-bottom flex flex-col relative hero overflow-hidden">
       <div className="md:px-0 md:min-h-[667px] min-h-[] flex justify-between items-end mx-auto w-full relative max-w-7xl mx-auto">
         <img
           src="/images/3d.png"
