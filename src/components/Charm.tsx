@@ -37,7 +37,7 @@ const Charm = () => {
       <div className="max-w-7xl mx-auto md:rounded-lg md:mt-20 flex md:min-h-[926px] overflow-hidden md:flex-row flex-col">
         <div className="md:w-1/2 w-full py-10 px-8 bg-[#FCAF43] flex flex-col justify-between">
           <h2 className="text-[43px] font-bold text-white charm-text">
-            Journées privilèges les 13 et 14 sept. 2024
+            Premiers arrivés, premiers servis !
           </h2>
           <ul className="mt-5 md:ml-5 charm-text">
             <li className="text-[24px] text-white list-none mt-2">
@@ -114,7 +114,7 @@ const Charm = () => {
             />
           </div>
         </div>
-        <div className="md:w-1/2 w-full bg-[url('/images/family.png')] bg-no-repeat bg-cover bg-center min-h-max md:h-auto h-[800px]"></div>
+        <div className="md:w-1/2 w-full bg-[url('/images/CC04.jpg')] bg-no-repeat bg-left bg-cover bg-center min-h-max md:h-auto h-[800px]"></div>
       </div>
     </section>
   );
