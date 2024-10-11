@@ -61,11 +61,11 @@ const Carousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const images: Image[] = [
     {
-      src: "/images/cuisine.png",
+      src: "/images/CC05.jpg",
       title: "ESPACES EXTÉRIEURS POUR TOUS",
     },
     {
-      src: "/images/exterieur.png",
+      src: "/images/CC03.jpg",
       title: "DIFFÉRENTS AGENCEMENTS DE 1 À 3 PIÈCES",
     },
     {
