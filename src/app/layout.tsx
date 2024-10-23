@@ -18,7 +18,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/logotop.png" sizes="any" type="image/png" />
 
-        {/* Google tag (gtag.js) */}
+        {/* Google tag (gtag.js) for G-HZR4RQ0K73 */}
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-HZR4RQ0K73"
@@ -30,6 +30,22 @@ export default function RootLayout({
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-HZR4RQ0K73');
+            `,
+          }}
+        />
+
+        {/* Google tag (gtag.js) for AW-11272063965 */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-11272063965"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-11272063965');
             `,
           }}
         />
