@@ -17,6 +17,15 @@ export default function RootLayout({
     <html lang="fr">
       <head>
         <link rel="icon" href="/logotop.png" sizes="any" type="image/png" />
+
+        {/* Event snippet for Envoi de formulaire pour prospects conversion */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              gtag('event', 'conversion', {'send_to': 'AW-11272063965/4SUGCOvG5cAYEN2X-P4p'});
+            `,
+          }}
+        />
       </head>
       <body className={`${libreBaskerville.className}`}>
         {children}
